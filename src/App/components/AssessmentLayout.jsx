@@ -4,7 +4,7 @@ import NavigationButtons from './NavigationButtons';
 
 const AssessmentLayout = ({ children, title, progress, prevPage, nextPage, showMascot = true }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-amber-900 to-amber-950">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-amber-900 to-amber-950">     {/* BAC*/}
       <ProgressBar progress={progress} title={title} />
       
       <div className="flex-grow flex flex-col items-center justify-center px-4 py-6 relative">
@@ -26,6 +26,8 @@ const AssessmentLayout = ({ children, title, progress, prevPage, nextPage, showM
       <NavigationButtons prevPage={prevPage} nextPage={nextPage} />
     </div>
   );
-}
+}   
 
 export default AssessmentLayout;
+
+    

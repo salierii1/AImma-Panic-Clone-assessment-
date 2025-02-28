@@ -27,7 +27,7 @@ function App() {
           <Route path="/Assessment/daily-goal" element={<DailyGoal />} />
           <Route path="/Assessment/goals" element={<Goals />} />
           <Route path="/Assessment/proficiency" element={<Proficiency />} />
-          <Route path="/Assessment/questions" element={<Questions />} />
+          <Route path="/Assessment/questions" element={<Questions />} />    
           <Route path="/Assessment/results" element={<Results />} />
           <Route path="/Assessment/user-type" element={<UserType />} />
         </Routes>

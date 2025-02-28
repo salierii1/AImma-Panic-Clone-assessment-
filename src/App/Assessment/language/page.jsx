@@ -11,19 +11,19 @@ export default function Language() {
       title="Preferred Language"
       progress={10}
       prevPage="/Assessment"
-      nextPage="/Assessment/user-type"
+      nextPage="/Assessment/user-type"  
     >
       <AssessmentStep title="Choose a language">
-        <p className="text-white mb-4">For your convenience</p>
+        <p className="text-white mb-10">For your convenience</p>
         
         <div className="w-full max-w-md mx-auto">
           <select 
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
-            className="w-full p-3 rounded-md text-gray-800 mb-6"
+            className="w-11/12 p-3 rounded-2xl text-gray-800 text-center mb-6 border-2 border-white bg-white"
           >
             <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
+            <option alue="Spanish">Spanish</option>
             <option value="French">French</option>
             <option value="German">German</option>
             <option value="Japanese">Japanese</option>
@@ -34,3 +34,4 @@ export default function Language() {
     </AssessmentLayout>
   );
 }
+
