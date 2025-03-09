@@ -11,3 +11,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
 } 
+
+.hide-navigation-and-mascot .absolute {
+  display: none;
+}
+
+.hide-navigation-and-mascot .NavigationButtons {
+  display: none;
+}

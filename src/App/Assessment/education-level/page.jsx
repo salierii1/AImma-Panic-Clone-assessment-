@@ -22,28 +22,30 @@ export default function EducationLevel() {
 
   return (
     <AssessmentLayout
-      title="Education Level"
+      title="Skill Level Assessment"
       progress={30}
       prevPage="/Assessment/user-type"
       nextPage={selectedLevel ? `/Assessment/${selectedLevel.nextStep.toLowerCase()}` : null}
+      showMascot= "true"
     >
       <AssessmentStep title="What's your education level?">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
           {assessmentFlow.educationLevel.options.map((option) => (
             <button
               key={option.id}
               onClick={() => setSelectedLevel(option)}
-              className={`p-6 rounded-lg border-2 text-left transition-all duration-200 ${
+              className={`px-14.5 py-25 rounded-lg border-2 text-center transition-all duration-200 
+                ${
                 selectedLevel?.id === option.id
                   ? 'border-white bg-amber-800/50 text-white'
                   : 'border-amber-800/30 text-white/80 hover:border-amber-800/50'
               }`}
             >
-              <div className="flex items-center space-x-4">
-                <span className="text-2xl">{option.icon}</span>
-                <div>
-                  <h3 className="font-medium text-lg">{option.label}</h3>
+              <div className="flex justify-center space-x-4">
+                <span className="text-6xl">{option.icon}</span>
                 </div>
+                <div> 
+                <h3 className="mt-5 font-medium text-lg">{option.label}</h3>
               </div>
             </button>
           ))}
