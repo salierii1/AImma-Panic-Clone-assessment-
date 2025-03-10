@@ -70,7 +70,7 @@ export const assessmentFlow = {
         options: ['Programming', 'Networking', 'Web Development', 'Game Development', 'AI/Machine Learning'] },
       { id: 'careerGoals', label: 'What are your career goals?', type: 'text' }
     ],
-    nextStep: 'techInterest'
+    nextStep: 'dailyGoal'
   },
 
   collegeQuestions: {
@@ -83,7 +83,7 @@ export const assessmentFlow = {
       { id: 'targetIndustry', label: 'Which industry are you targeting?', type: 'select',
         options: ['Software Development', 'Data Science', 'Cybersecurity', 'Web Development', 'Game Development', 'Other'] }
     ],
-    nextStep: 'specificSkills'
+    nextStep: 'dailyGoal'
   },
 
   gradQuestions: {
@@ -97,7 +97,7 @@ export const assessmentFlow = {
       { id: 'researchInterests', label: 'What are your research interests?', type: 'multiselect',
         options: ['AI/ML', 'Data Science', 'Computer Vision', 'Cybersecurity', 'Robotics', 'Human-Computer Interaction', 'Other'] }
     ],
-    nextStep: 'researchFocus'
+    nextStep: 'dailyGoal'
   },
 
   yearsExperience: {
@@ -118,7 +118,7 @@ export const assessmentFlow = {
       { id: 'skillsUsed', label: 'What skills have you used in your current role?', type: 'multiselect',
         options: ['Programming', 'Networking', 'Web Development', 'Game Development', 'AI/Machine Learning', 'Data Analysis', 'Cybersecurity', 'Project Management', 'Other'] }
     ],
-    nextStep: 'techInterest'
+    nextStep: 'dailyGoal'
   },
 
   midQuestions: {
@@ -130,7 +130,7 @@ export const assessmentFlow = {
       { id: 'skillsUsed', label: 'What skills have you used in your current role?', type: 'multiselect',
         options: ['Programming', 'Networking', 'Web Development', 'Game Development', 'AI/Machine Learning', 'Data Analysis', 'Cybersecurity', 'Project Management', 'Other'] }
     ],
-    nextStep: 'techInterest'
+    nextStep: 'dailyGoal'
   },
 
   seniorQuestions: {
@@ -142,7 +142,7 @@ export const assessmentFlow = {
       { id: 'skillsUsed', label: 'What skills have you used in your current role?', type: 'multiselect',
         options: ['Programming', 'Networking', 'Web Development', 'Game Development', 'AI/Machine Learning', 'Data Analysis', 'Cybersecurity', 'Project Management', 'Other'] }
     ],
-    nextStep: 'techInterest'
+    nextStep: 'dailyGoal'
   },
 
   techInterest: {
@@ -266,7 +266,7 @@ export const assessmentFlow = {
     questions: [
       { id: 'programmingGoals', label: 'What are your programming goals?', type: 'text' }
     ],
-    nextStep: 'programmingGoals'
+    nextStep: 'complete'
   },
 
   networkingGoals: {
@@ -274,7 +274,7 @@ export const assessmentFlow = {
     questions: [
       { id: 'networkingGoals', label: 'What are your networking goals?', type: 'text' }
     ],
-    nextStep: 'networkingGoals'
+    nextStep: 'complete'
   },
 
   webDevelopmentGoals: {
@@ -282,7 +282,7 @@ export const assessmentFlow = {
     questions: [
       { id: 'webDevelopmentGoals', label: 'What are your web development goals?', type: 'text' }
     ],
-    nextStep: 'webDevelopmentGoals'
+    nextStep: 'complete'
   },
 
   gameDevelopmentGoals: {
@@ -290,7 +290,7 @@ export const assessmentFlow = {
     questions: [
       { id: 'gameDevelopmentGoals', label: 'What are your game development goals?', type: 'text' }
     ],
-    nextStep: 'gameDevelopmentGoals'
+    nextStep: 'complete'
   },
 
   aiMachineLearningGoals: {
@@ -298,7 +298,7 @@ export const assessmentFlow = {
     questions: [
       { id: 'aiMachineLearningGoals', label: 'What are your AI/Machine Learning goals?', type: 'text' }
     ],
-    nextStep: 'aiMachineLearningGoals'
+    nextStep: 'complete'
   },
 
   dataScienceGoals: {
@@ -306,7 +306,7 @@ export const assessmentFlow = {
     questions: [
       { id: 'dataScienceGoals', label: 'What are your data science goals?', type: 'text' }
     ],
-    nextStep: 'dataScienceGoals'
+    nextStep: 'complete'
   },
 
   cybersecurityGoals: {
@@ -314,7 +314,7 @@ export const assessmentFlow = {
     questions: [
       { id: 'cybersecurityGoals', label: 'What are your cybersecurity goals?', type: 'text' }
     ],
-    nextStep: 'cybersecurityGoals'
+    nextStep: 'complete'
   },
 
   roboticsGoals: {
@@ -322,7 +322,7 @@ export const assessmentFlow = {
     questions: [
       { id: 'roboticsGoals', label: 'What are your robotics goals?', type: 'text' }
     ],
-    nextStep: 'roboticsGoals'
+    nextStep: 'complete'
   },
 
   humanComputerInteractionGoals: {
@@ -330,7 +330,7 @@ export const assessmentFlow = {
     questions: [
       { id: 'humanComputerInteractionGoals', label: 'What are your human-computer interaction goals?', type: 'text' }
     ],
-    nextStep: 'humanComputerInteractionGoals'
+    nextStep: 'complete'
   },
 
   otherInterestsGoals: {
@@ -338,7 +338,60 @@ export const assessmentFlow = {
     questions: [
       { id: 'otherInterestsGoals', label: 'What are your other interests goals?', type: 'text' }
     ],
-    nextStep: 'otherInterestsGoals'
+    nextStep: 'complete'
+  },
+
+  dailyGoal: {
+    title: 'Daily Learning Goal',
+    questions: [
+      {
+        id: 'timeCommitment',
+        label: 'How much time can you commit to learning each day?',
+        type: 'select',
+        options: [
+          { value: 15, label: '15 minutes' },
+          { value: 30, label: '30 minutes' },
+          { value: 60, label: '1 hour' },
+          { value: 120, label: '2 hours' }
+        ]
+      }
+    ],
+    nextStep: 'techInterest'
+  },
+
+  previousExperience: {
+    title: 'Previous Experience',
+    questions: [
+      { id: 'lastRole', label: 'What was your last role?', type: 'text' },
+      { id: 'yearsExperience', label: 'Years of experience', type: 'select',
+        options: ['0-1', '1-3', '3-5', '5+'] },
+      { id: 'reasonForChange', label: 'Reason for seeking new opportunity', type: 'text' }
+    ],
+    nextStep: 'dailyGoal'
+  },
+
+  transitionType: {
+    title: 'Career Transition',
+    questions: [
+      { id: 'currentField', label: 'What field are you transitioning from?', type: 'text' },
+      { id: 'desiredField', label: 'What tech field interests you most?', type: 'select',
+        options: ['Software Development', 'Data Science', 'Cybersecurity', 'Web Development', 'Other'] },
+      { id: 'transitionReason', label: 'Why are you interested in transitioning to tech?', type: 'text' }
+    ],
+    nextStep: 'dailyGoal'
+  },
+
+  complete: {
+    title: 'Assessment Complete',
+    questions: [
+      { 
+        id: 'feedback',
+        label: 'Thank you for completing the assessment! Any additional feedback?',
+        type: 'text',
+        optional: true
+      }
+    ],
+    nextStep: null
   }
 };
 
